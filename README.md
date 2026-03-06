@@ -1,4 +1,4 @@
-# SpamShield
+![Spamshield logo](https://videos.openai.com/az/vg-assets/task_01kk0f7g9zfck8bw8fm4s53750%2F1772763754_img_0.webp?se=2026-03-08T00%3A00%3A00Z&sp=r&sv=2026-02-06&sr=b&skoid=aa5ddad1-c91a-4f0a-9aca-e20682cc8969&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-03-05T12%3A59%3A29Z&ske=2026-03-12T13%3A04%3A29Z&sks=b&skv=2026-02-06&sig=Cf8CHesl3jiWMfcbJcYrHXDvM35XRK4dTmXTEHqnIo8%3D&ac=oaivgprodscus2)
 
 A browser extension that helps detect spam emails by analyzing subject and message content using a custom algorithm.
 
