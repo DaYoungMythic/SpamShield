@@ -43,7 +43,7 @@ function addSpamCheckButton() {
     button.disabled = true;
     
     try {
-      const response = await fetch('https://congenial-meme-r46qpr95wwgxh5gqj-5000.app.github.dev/analyze', {
+      const response = await fetch('http://localhost:5000/analyze', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)
