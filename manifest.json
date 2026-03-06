@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "SpamShield",
+  "version": "1.0",
+  "description": "Automatically detect spam emails on webmail sites",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "scripting"
+  ],
+  "host_permissions": [
+    "*://mail.google.com/*",
+    "*://outlook.live.com/*",
+    "*://mail.yahoo.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "SpamShield"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://mail.google.com/*"],
+      "js": ["gmail_content.js"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["*://outlook.live.com/*"],
+      "js": ["outlook_content.js"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["*://mail.yahoo.com/*"],
+      "js": ["yahoo_content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
