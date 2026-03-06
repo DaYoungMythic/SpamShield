@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SpamShield</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>SpamShield</h1>
+    <p>Enter email details or use automated detection on supported sites.</p>
+    <label for="subject">Subject:</label>
+    <textarea id="subject" placeholder="Email subject"></textarea>
+    
+    <label for="message">Message:</label>
+    <textarea id="message" placeholder="Email body"></textarea>
+    
+    <button id="analyze">Analyze Spam</button>
+    
+    <div id="result" class="result"></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
