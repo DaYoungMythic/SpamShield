@@ -71,3 +71,5 @@ Emails with risk >= 30 are considered spam.
 - Python 3.x
 - Flask (`pip install flask`)
 - Modern web browser with extension support
+
+if you have any problems using SpamShield, [write an issue](https://github.com/DaYoungMythic/SpamShield/issues/new/choose)
