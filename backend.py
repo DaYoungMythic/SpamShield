@@ -179,7 +179,7 @@ def calculate_risk(subject, message):
         subjectWords.append(build)
     
     for word, wordRisk in spamWords.items():
-      risk += wordRisk * message.lower().count(word.lower()) / max(1, (len(message) / 5))
+      risk += wordRisk * message.lower().count(word.lower()) / max(1, (len(message) / 2.5))
       risk += wordRisk * subject.lower().count(word.lower())
     
     return risk
@@ -190,7 +190,7 @@ def analyze():
     subject = data.get('subject', '')
     message = data.get('message', '')
     risk = calculate_risk(subject, message)
-    is_spam = risk >= 6.39
+    is_spam = risk >= 15
     print(f"Subject: {subject[:50]}... | Risk: {risk:.2f} | Spam: {is_spam}")
     return jsonify({'risk': risk, 'is_spam': is_spam})
 
