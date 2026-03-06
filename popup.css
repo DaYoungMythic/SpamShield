@@ -14,7 +14,7 @@
   --result-safe-text: #155724;
 }
 
-body.dark-mode {
+:root.dark-mode {
   --bg-color: #1e1e1e;
   --text-color: #e0e0e0;
   --border-color: #444444;
