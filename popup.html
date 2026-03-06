@@ -8,7 +8,46 @@
 </head>
 <body>
   <div class="container">
-    <h1>SpamShield</h1>
+    <div class="header">
+      <h1>SpamShield</h1>
+      <button id="settingsBtn" class="settings-btn" title="Settings">⚙️</button>
+    </div>
+
+    <!-- Settings Modal -->
+    <div id="settingsModal" class="settings-modal hidden">
+      <div class="settings-panel">
+        <div class="settings-header">
+          <h2>Settings</h2>
+          <button id="closeSettingsBtn" class="close-btn">&times;</button>
+        </div>
+        
+        <div class="settings-body">
+          <!-- Dark Mode Toggle -->
+          <div class="setting-group">
+            <label for="themeToogle">Theme:</label>
+            <div class="theme-options">
+              <select id="themeToggle">
+                <option value="system">System Preference</option>
+                <option value="light">Light Mode</option>
+                <option value="dark">Dark Mode</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Leniency Slider -->
+          <div class="setting-group">
+            <label for="leniency">Detector Leniency:</label>
+            <div class="leniency-container">
+              <span class="leniency-label">Strict</span>
+              <input id="leniency" type="range" min="1" max="5" value="3" />
+              <span class="leniency-label">Lenient</span>
+            </div>
+            <p class="leniency-desc">Higher values are more lenient (fewer false positives)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <p>Enter email details or use automated detection on supported sites.</p>
     <label for="subject">Subject:</label>
     <textarea id="subject" placeholder="Email subject"></textarea>

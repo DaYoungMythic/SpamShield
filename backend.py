@@ -189,9 +189,15 @@ def analyze():
     data = request.get_json()
     subject = data.get('subject', '')
     message = data.get('message', '')
+    leniency = data.get('leniency', 3)  # Default to 3 (medium)
+    
+    # Convert leniency (1-5 scale) to threshold
+    # 1 = strict (threshold 20), 3 = medium (threshold 15), 5 = lenient (threshold 5)
+    threshold = 20 - (leniency - 1) * 3.75
+    
     risk = calculate_risk(subject, message)
-    is_spam = risk >= 15
-    print(f"Subject: {subject[:50]}... | Risk: {risk:.2f} | Spam: {is_spam}")
+    is_spam = risk >= threshold
+    print(f"Subject: {subject[:50]}... | Risk: {risk:.2f} | Threshold: {threshold:.2f} | Spam: {is_spam}")
     return jsonify({'risk': risk, 'is_spam': is_spam})
 
 if __name__ == '__main__':
